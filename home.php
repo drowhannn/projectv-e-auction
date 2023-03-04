@@ -1,4 +1,6 @@
 <?php
+include('includes/header.php');
+
 session_start();
 if ($_SESSION['isLoggedIn'] != true) {
     header('Location: login.php');
@@ -9,4 +11,6 @@ if ($_SESSION['toast-success']) {
     $_SESSION['toast-success'] = null;
 }
 
-echo 'Logged In';
+include('includes/navbar.php');
+
+include('includes/footer.php');
